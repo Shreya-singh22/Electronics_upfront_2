@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useWishlist } from '@/store/wishlistStore';
 import { useCart } from '@/store/cartStore';
 
-export default function ProfilePage() {
+function ProfileContent() {
     const searchParams = useSearchParams();
     const [activeTab, setActiveTab] = useState('orders');
 
@@ -313,5 +313,13 @@ export default function ProfilePage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+export default function ProfilePage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-white">Loading Profile...</div>}>
+            <ProfileContent />
+        </Suspense>
     );
 }
