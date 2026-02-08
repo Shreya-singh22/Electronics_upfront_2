@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans`}>
+      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans`} suppressHydrationWarning>
         <ThemeWrapper>
           <WishlistProvider>
             <CartProvider>

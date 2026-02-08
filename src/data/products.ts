@@ -382,7 +382,7 @@ export const products: Product[] = [
         name: 'External SSD 1TB',
         price: formatINR(usdToInr(129.99)),
         priceNum: 129.99,
-        image: 'https://images.unsplash.com/photo-1531492343-d364adb52ced?w=800&h=800&fit=crop',
+        image: 'https://images.unsplash.com/photo-1597872250969-95a2f588c83e?w=800&h=800&fit=crop',
         description: 'Blazing fast portable storage for your files, photos, and games. Rugged design for durability.',
         shortDescription: '1TB Portable External NVMe SSD.',
         category: 'Accessories',
@@ -402,7 +402,7 @@ export const products: Product[] = [
             'Password protection'
         ],
         images: [
-            'https://images.unsplash.com/photo-1531492343-d364adb52ced?w=800&h=800&fit=crop',
+            'https://images.unsplash.com/photo-1597872250969-95a2f588c83e?w=800&h=800&fit=crop',
             'https://images.unsplash.com/photo-1597872250969-95a2f588c83e?w=800&h=800&fit=crop'
         ]
     },
@@ -411,7 +411,7 @@ export const products: Product[] = [
         name: 'Smart Home Hub',
         price: formatINR(usdToInr(89.99)),
         priceNum: 89.99,
-        image: 'https://images.unsplash.com/photo-1558002038-1091a1661116?w=800&h=800&fit=crop',
+        image: 'https://images.unsplash.com/photo-1563461661646-1bd40cc1a6eb?w=800&h=800&fit=crop',
         description: 'Control your entire smart home from one device. Compatible with thousands of devices.',
         shortDescription: 'Central hub for all your smart devices.',
         category: 'Smart Home',
@@ -431,7 +431,7 @@ export const products: Product[] = [
             'Privacy shutter'
         ],
         images: [
-            'https://images.unsplash.com/photo-1558002038-1091a1661116?w=800&h=800&fit=crop',
+            'https://images.unsplash.com/photo-1563461661646-1bd40cc1a6eb?w=800&h=800&fit=crop',
             'https://images.unsplash.com/photo-1563461661646-1bd40cc1a6eb?w=800&h=800&fit=crop'
         ]
     },

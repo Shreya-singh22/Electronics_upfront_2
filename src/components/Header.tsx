@@ -32,8 +32,14 @@ export default function Header() {
     }
   }, [isProductsOpen]);
 
+  const closeMenus = () => {
+    setIsMenuOpen(false);
+    setIsProductsOpen(false);
+  };
+
   const handleFilterChange = (filters: Record<string, string[]>) => {
     setActiveFilters(filters);
+    closeMenus(); // Close menus when filters are applied
     // Scroll to products section when filters are applied
     if (Object.keys(filters).length > 0) {
       setTimeout(() => {
@@ -189,7 +195,7 @@ export default function Header() {
                   </svg>
                 </div>
               </div>
-              <Link href="/" className="block px-2 font-medium text-gray-600">Home</Link>
+              <Link href="/" className="block px-2 font-medium text-gray-600" onClick={closeMenus}>Home</Link>
               <button
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
                 className="flex items-center justify-between w-full px-2 font-medium text-gray-600"
@@ -199,12 +205,13 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <a href="#featured" className="block px-2 font-medium text-gray-600">Featured</a>
-              <Link href="/about" className="block px-2 font-medium text-gray-600">About</Link>
+              <a href="#featured" className="block px-2 font-medium text-gray-600" onClick={closeMenus}>Featured</a>
+              <Link href="/about" className="block px-2 font-medium text-gray-600" onClick={closeMenus}>About</Link>
               <div className="pt-4 border-t border-gray-100 space-y-3 px-2">
                 <Link
                   href="/cart"
                   className="flex items-center gap-2 font-medium text-gray-600"
+                  onClick={closeMenus}
                 >
                   <span className="relative">
                     Cart
@@ -213,7 +220,7 @@ export default function Header() {
                     )}
                   </span>
                 </Link>
-                <Link href="/profile" className="block font-medium text-gray-600">Account</Link>
+                <Link href="/profile" className="block font-medium text-gray-600" onClick={closeMenus}>Account</Link>
               </div>
             </div>
           )}
